@@ -17,6 +17,7 @@
 	<img src='images/${openGesloten}.png' alt='${openGesloten}'
 		class='fullwidth'>		
 	<a href="<c:url value="/sauzen"/>">Onze sauzen</a>
+	<a href="<c:url value="/ingredienten"/>">Zoeken op ingredienten</a>
 	<div>Onze helpdesk heeft een 'rechtstreeks' telefoonnummer! : ${initParam.telefoonnummerHelpdesk}</div>
 	<footer>Helpdesk via omweg: ${telefoonnummerHelpdesk}</footer>
 </body>
