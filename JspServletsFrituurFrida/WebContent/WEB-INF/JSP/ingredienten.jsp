@@ -11,7 +11,7 @@
 <body>
 	<h1>Frituur Frida: Ingredienten!</h1>
 	<form>
-		<label><input type="text" name="ingredient" value="${param.ingredient}" /> zoeken op 1 ingredient</label>
+		<label>zoeken op 1 ingredient <input type="text" name="ingredient" value="${param.ingredient}" /></label>
 		<div>Zoek sausen die mintens 1 van volgende ingredienten hebben:
 		<ul>
 			<c:forEach var="ingredient" items="${ingredienten}">

@@ -10,15 +10,28 @@
 </head>
 <body>
 	<h1>Frituur Frida's sauzen</h1>
-	<c:if test="${not empty sauzen}">
-		<ul>
-			<c:forEach var="saus" items="${sauzen}">
-				<li><img src="images/${saus.naam}.png" alt="${saus.naam}">${saus.naam}<c:forEach var="ingredient"
-						items="${saus.ingredienten}" varStatus="status">${status.first ? ": " : ", "}${ingredient}${status.last ? "." : ""}</c:forEach>
-				</li>
-			</c:forEach>
-		</ul>
+	<c:if test="${not empty fouten}">
+		<c:forEach var="fout" items="${fouten}">
+		${fout.value}
+		</c:forEach>
 	</c:if>
-	<footer><a href="<c:url value="/index.htm"/>">get back</a></footer>
+	<c:if test="${not empty sauzen}">
+		<form method="POST">
+			<ul>
+				<c:forEach var="saus" items="${sauzen}">
+					<li><label><input type="checkbox"
+							name="teVerwijderenSauzen" value="${saus.nummer}" />${saus.naam}</label><img
+						src="images/${saus.naam}.png" alt="${saus.naam}">
+					<c:forEach var="ingredient" items="${saus.ingredienten}"
+							varStatus="status">${status.first ? ": " : ", "}${ingredient}${status.last ? "." : ""}</c:forEach>
+					</li>
+				</c:forEach>
+			</ul>
+			<input type="submit" value="verwijderen" />
+		</form>
+	</c:if>	
+	<footer>
+		<a href="<c:url value="/index.htm"/>">get back</a>
+	</footer>
 </body>
 </html>

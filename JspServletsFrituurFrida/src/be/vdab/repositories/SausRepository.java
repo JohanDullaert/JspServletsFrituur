@@ -1,7 +1,6 @@
 package be.vdab.repositories;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -48,11 +47,15 @@ public class SausRepository {
 	public List<Saus> findByHasAllIngredients(String[] ingredienten) {
 		List<Saus> sauzen = new ArrayList<>();
 		for (Saus saus : SAUZEN.values()) {
-			if (saus.hasAllIngredients(ingredienten)){
+			if (saus.hasAllIngredients(ingredienten)) {
 				sauzen.add(saus);
 			}
 		}
 		return sauzen;
+	}
+
+	public void delete(Long nummer) {
+		SAUZEN.remove(nummer);
 	}
 
 }

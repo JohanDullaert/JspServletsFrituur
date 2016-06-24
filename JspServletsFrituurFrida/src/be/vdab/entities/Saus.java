@@ -1,9 +1,7 @@
 package be.vdab.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
 
 import be.vdab.util.Utilities;
 
@@ -60,11 +58,8 @@ public class Saus implements Serializable {
 	public final boolean hasAllIngredients(String[] ingredienten){
 		if (ingredienten == null){
 			return false;
-		}
-		if(Arrays.asList(this.ingredienten).containsAll(Arrays.asList(ingredienten))){			
-				return true;
-			}	
-		return false;
+		}		
+		return Arrays.asList(this.ingredienten).containsAll(Arrays.asList(ingredienten));
 	}
 
 	@Override
