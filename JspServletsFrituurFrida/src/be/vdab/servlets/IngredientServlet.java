@@ -12,7 +12,7 @@ import be.vdab.repositories.IngredientenRepository;
 import be.vdab.repositories.SausRepository;
 
 @WebServlet("/ingredienten")
-public class IngredientService extends HttpServlet {
+public class IngredientServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 

@@ -11,7 +11,7 @@ import be.vdab.entities.Saus;
 public class SausRepository {
 
 	// oef 10 MVC: er is nog geen sprake van toevoegen of verwijderen van
-	// suazen,
+	// sauzen,
 	// dus concurrent lijkt me overbodig op deze moment (cursus is wel met
 	// create)
 	private final static Map<Long, Saus> SAUZEN = new ConcurrentHashMap<>();
