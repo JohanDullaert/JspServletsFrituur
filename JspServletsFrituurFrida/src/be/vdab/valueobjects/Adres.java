@@ -33,7 +33,7 @@ public class Adres implements Serializable {
 	public String getStraat() {
 		return straat;
 	}
-	
+
 	public String getHuisNr() {
 		return huisNr;
 	}
@@ -41,12 +41,14 @@ public class Adres implements Serializable {
 	public Gemeente getGemeente() {
 		return gemeente;
 	}
-	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((gemeente == null) ? 0 : gemeente.hashCode());
+		result = prime * result + gemeente.hashCode();
+		result = prime * result + huisNr.hashCode();
+		result = prime * result + straat.hashCode();
 		return result;
 	}
 
@@ -59,28 +61,13 @@ public class Adres implements Serializable {
 			return false;
 		}
 		Adres other = (Adres) obj;
-		if (gemeente == null) {
-			if (other.gemeente != null) {
-				return false;
-			}
-		} else if (!gemeente.equals(other.gemeente)) {
+		if (!gemeente.equals(other.gemeente)) {
 			return false;
 		}
-		if (huisNr == null) {
-			if (other.huisNr != null) {
-				return false;
-			}
-		} else if (!huisNr.equals(other.huisNr)) {
+		if (!huisNr.equals(other.huisNr)) {
 			return false;
 		}
-		if (straat == null) {
-			if (other.straat != null) {
-				return false;
-			}
-		} else if (!straat.equals(other.straat)) {
-			return false;
-		}
-		return true;
+		return straat.equals(other.straat);
 	}
 
 	@Override

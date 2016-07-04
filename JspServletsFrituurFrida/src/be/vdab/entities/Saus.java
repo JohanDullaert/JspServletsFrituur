@@ -66,6 +66,7 @@ public class Saus implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + naam.hashCode();
 		result = prime * result + (int) (nummer ^ (nummer >>> 32));
 		return result;
 	}
@@ -79,11 +80,7 @@ public class Saus implements Serializable {
 			return false;
 		}
 		Saus other = (Saus) obj;
-		if (naam == null) {
-			if (other.naam != null) {
-				return false;
-			}
-		} else if (!naam.equals(other.naam)) {
+		if (!naam.equals(other.naam)) {
 			return false;
 		}
 		return nummer == other.nummer;

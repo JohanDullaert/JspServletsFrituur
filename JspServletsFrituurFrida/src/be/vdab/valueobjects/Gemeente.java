@@ -63,23 +63,23 @@ public class Gemeente implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((naam == null) ? 0 : naam.hashCode());
+		result = prime * result + naam.hashCode();
+		result = prime * result + postCode;
 		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj)
+		if (this == obj){
 			return true;
+		}			
 		if (!(obj instanceof Gemeente)){
 			return false;
 		}			
 		Gemeente other = (Gemeente) obj;
-		if (naam == null) {
-			if (other.naam != null)
-				return false;
-		} else if (!naam.equals(other.naam))
+		if (!naam.equals(other.naam)){
 			return false;
+		}			
 		return (postCode == other.postCode);
 	}
 
