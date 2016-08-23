@@ -16,9 +16,15 @@
 		<param-value>06 666 66 66</param-value>
 	</context-param>
 <!-- 	<session-config> -->
+<<<<<<< HEAD
 <!-- 		<!- - time out 20 minuten ipv default van de webserver - -> -->
 <!-- 		<session-timeout>20</session-timeout> -->
 <!-- 		<!- - url rewriting afzetten - -> -->
+=======
+	<!-- 20 minuten -->
+<!-- 		<session-timeout>20</session-timeout>  -->
+	<!-- geen URL rewriting -->	
+>>>>>>> branch 'master' of https://github.com/JohanDullaert/JspServletsFrituur.git
 <!-- 		<tracking-mode>COOKIE</tracking-mode> -->
 <!-- 	</session-config> -->
 </web-app>
