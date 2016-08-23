@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-<!--   <servlet> -->
-<!--   	<servlet-name>indexServlet</servlet-name> -->
-<!--   	<servlet-class>be.vdab.servlets.IndexServlet</servlet-class> -->
-<!--   	<init-param> -->
-<!--   		<param-name>telefoonnummerHelpdesk</param-name> -->
-<!--   		<param-value>09 999 99 99</param-value> -->
-<!--   	</init-param> -->
-<!--   </servlet> -->
-  <context-param>
-  	<param-name>telefoonnummerHelpdesk</param-name>
-  	<param-value>06 666 66 66</param-value>
-  </context-param>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<!-- <servlet> -->
+	<!-- <servlet-name>indexServlet</servlet-name> -->
+	<!-- <servlet-class>be.vdab.servlets.IndexServlet</servlet-class> -->
+	<!-- <init-param> -->
+	<!-- <param-name>telefoonnummerHelpdesk</param-name> -->
+	<!-- <param-value>09 999 99 99</param-value> -->
+	<!-- </init-param> -->
+	<!-- </servlet> -->
+	<context-param>
+		<param-name>telefoonnummerHelpdesk</param-name>
+		<param-value>06 666 66 66</param-value>
+	</context-param>
+<!-- 	<session-config> -->
+<!-- 		<!- - time out 20 minuten ipv default van de webserver - -> -->
+<!-- 		<session-timeout>20</session-timeout> -->
+<!-- 		<!- - url rewriting afzetten - -> -->
+<!-- 		<tracking-mode>COOKIE</tracking-mode> -->
+<!-- 	</session-config> -->
 </web-app>
