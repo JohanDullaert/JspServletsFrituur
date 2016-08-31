@@ -8,7 +8,7 @@ import java.util.Objects;
  * @author Johan.Dullaert
  *
  */
-public class Utilities {
+public final class Utilities {
 
 	private Utilities() {
 		// no instance needed
