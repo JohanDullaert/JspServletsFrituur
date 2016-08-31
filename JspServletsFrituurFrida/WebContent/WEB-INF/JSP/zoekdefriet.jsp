@@ -10,7 +10,7 @@
 </head>
 <body>
 	<h1>Frituur Frida: ons frietspel!</h1>
-	<form method="post" id ="frietform">
+	<form method="post" id ="frietform" name="frietform">
 		<c:forEach var="deur" items="${deuren}" varStatus="status">
 			<button type="submit" name="volgnummerknop" 
 			<%-- value="${status.index}" wordt nu doorgegeven aan javascript functie--%> 
@@ -50,23 +50,27 @@
 // 			}	
 
 // bovenstaande lijdt tot (en dat hidden field andere aanpak zou aparte id's voor elke volgnummerknop zijn ...):
-		document.getElementById('frietform:nieuwspel').onclick = function() {		
-			document.getElementById('nieuwspel').disabled = true;	
+		document.getElementById('nieuwspel').onclick = function() {		
+			//document.getElementById('nieuwspel').disabled = true;	// dan is m'n knop null gvd
 			var deurknoppen = document.getElementsByName('volgnummerknop');				
 			for (var i = 0; i < deurknoppen.length; i++) {				
 				deurknoppen[i].disabled = true;
 			}
+			//document.getElementById('nieuwspel').disabled = false;
 			document.frietform.nieuwspel.click();
 		}
 		function buttonClick(volgnummer) {			
 			document.getElementById('nieuwspel').disabled = true;	
 			var deurknoppen = document.getElementsByName('volgnummerknop');				
 			for (var i = 0; i < deurknoppen.length; i++) {				
-				deurknoppen[i].disabled = true;
+				if (i != volgnummer) {// idem ... anders is m'n knop null
+					deurknoppen[i].disabled = true;
+				}
 			}
-			document.getElementById("volgnummer").value = volgnummer;
+			document.getElementById('volgnummer').value = volgnummer;
 			// zal de eerste volgnummerknop geven maar ik reken nu op het hidden field dus who cares
-			document.getElementById("volgnummerknop").click();
+			// document.getElementsByName('volgnummerknop')[0].click();
+			deurknoppen[volgnummer].click();
 		}
 
 	</script>
