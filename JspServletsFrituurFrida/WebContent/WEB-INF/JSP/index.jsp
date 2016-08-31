@@ -19,7 +19,7 @@
 	<a href="<c:url value="/sauzen"/>">Onze sauzen</a>
 	<a href="<c:url value="/ingredienten"/>">Zoeken op ingredienten</a>
 	<a href="<c:url value="/meisjesjongens"/>">kleurtjes</a>
-	<a href="<c:url value="zoekdefriet"/>">zoek de friet</a>
+	<a href="<c:url value="/zoekdefriet"/>">zoek de friet</a>
 	<div>Onze helpdesk heeft een 'rechtstreeks' telefoonnummer! : ${initParam.telefoonnummerHelpdesk}</div>
 	<footer>Helpdesk via omweg: ${telefoonnummerHelpdesk}</footer>
 </body>
