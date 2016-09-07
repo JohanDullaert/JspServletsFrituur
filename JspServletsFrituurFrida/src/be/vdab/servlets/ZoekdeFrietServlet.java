@@ -2,7 +2,6 @@ package be.vdab.servlets;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -54,7 +53,7 @@ public class ZoekdeFrietServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO try-catch, foutpagina of melding; friet gevonden => niet verder spelen & ...
 		HttpSession session = req.getSession();	
-		System.out.println("/////////" +  req.getParameter(OPNIEUW));
+//			System.out.println("/////////" +  req.getParameter(OPNIEUW));
 		if (req.getParameter(OPNIEUW) != null) {
 			session.invalidate();
 		} else {
